@@ -1,0 +1,37 @@
+﻿@page "{shoeId:int?}"
+@model WebApplicationFelix.Pages.Shoes.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+<h2>Editing @Model.Shoe.name</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Shoe.id" />
+    <div class="form-group">
+        <label asp-for="Shoe.name">Name</label>
+        <input asp-for="Shoe.name" class="form-control" />
+        <span class="text-danger" asp-validation-for="Shoe.name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Shoe.cost">Cost</label>
+        <input asp-for="Shoe.cost" class="form-control" />
+        <span class="text-danger" asp-validation-for="Shoe.cost"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Shoe.color">Color</label>
+        <input asp-for="Shoe.color" class="form-control" />
+        <span class="text-danger" asp-validation-for="Shoe.color"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Shoe.type">Type</label>
+        <select class="form-control" asp-for="Shoe.type" asp-items="Model.Types">
+       
+            
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial"/>
+}

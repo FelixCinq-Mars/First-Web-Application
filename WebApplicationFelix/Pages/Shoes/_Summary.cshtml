@@ -1,0 +1,18 @@
+﻿@using WebApplicationFelix.Core
+@model Shoe
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3>@Model.name</h3>
+    </div>
+    <div class="panel-body">
+        <span>Cost: @Model.cost</span>
+        <span>Color: @Model.color</span>
+        <span>Type: @Model.type</span>
+    </div>
+    <div class="panel-folder">
+        <a class="btn btn-primary" asp-page="./Detail" asp-route-shoeId="@Model.id">Details</a>
+        <a class="btn btn-primary" asp-page="./Edit" asp-route-shoeId="@Model.id">Edit</a>
+        <a class="btn btn-primary" asp-page="./Delete" asp-route-shoeId="@Model.id">Delete</a>
+    </div>
+</div>

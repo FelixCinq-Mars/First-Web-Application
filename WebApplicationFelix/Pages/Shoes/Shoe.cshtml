@@ -1,0 +1,45 @@
+﻿@page
+@model WebApplicationFelix.Pages.ShoeModel
+@{
+    ViewData["Title"] = "Shoes";
+}
+
+<h1>Shoes</h1>
+<div>@Model.Message</div>
+
+<form method="get">
+    <div class="form-group">
+        <div class="input-group">
+            <input type="search" class="form-control" asp-for="SearchTerm"/>
+            <div class="input-group-append">
+                <button class="btn btn-secondary">
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+<table class="table">
+    <tr class="headtable">
+        <td>Name</td>
+        <td>Cost ($)</td>
+        <td>Color</td>
+        <td>Type</td>
+    </tr>
+   @foreach(var shoe in Model.Shoes) {
+       <tr>
+           <td>@shoe.name</td>
+           <td>@shoe.cost</td>
+           <td>@shoe.color</td>
+           <td>@shoe.type</td>
+           <td>
+               <a class="btn btn-primary" asp-page="./Detail" asp-route-shoeId="@shoe.id">Details</a>
+               <a class="btn btn-primary" asp-page="./Edit" asp-route-shoeId="@shoe.id">Edit</a>
+               <a class="btn btn-primary" asp-page="./Delete" asp-route-shoeId="@shoe.id">Delete</a>
+           </td>
+       </tr>
+   }
+</table>
+
+
+<a asp-page=".\Edit" class="btn btn-primary">Add New</a>

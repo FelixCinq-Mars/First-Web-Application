@@ -1,0 +1,19 @@
+﻿@page
+@model WebApplicationFelix.Pages.Shoes.ClientShoeModel
+@{
+    ViewData["Title"] = "ClientShoes";
+}
+<h2>Client Shoes</h2>
+
+@section Scripts {
+    <script>
+
+        $(function() {
+            $.ajax("/api/shoes/", { method: "get"})
+            .then(funtion(response) {
+                console.dir(response);
+            })
+        })
+
+    </script>
+}
