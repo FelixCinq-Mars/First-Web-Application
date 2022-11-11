@@ -20,10 +20,10 @@ namespace WebApplicationFelix.Pages
             this.config = config;
             this.shoeData = shoeData;
         }
-        public void OnGet()
+        public void OnGet(string searchTerm)
         {
             Message = config["Message"];
-            Shoes = shoeData.GetShoesByName(SearchTerm);
+            Shoes = shoeData.GetShoesByName(searchTerm);
         }
     }
 }

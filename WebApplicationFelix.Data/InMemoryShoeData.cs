@@ -45,7 +45,7 @@ namespace WebApplicationFelix.Data
         }
 
 
-        public IEnumerable<Shoe> GetShoesByName(string name = null)
+        public IEnumerable<Shoe> GetShoesByName(string name)
         {
             return from r in shoes
                    where string.IsNullOrEmpty(name) || r.name.StartsWith(name)

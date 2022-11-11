@@ -6,6 +6,20 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome to EkoRun!</h1>
-    <p>The running shoe company that cares about the environment and performance.</p>
-   
+    <p>The running shoe website that cares about the environment and performance.</p>
+    <p>You can search for an eco-friendly shoe in the <a asp-page="/Shoes/Shoe">Shoes</a> section.</p>
+    <p>
+        This website was created by Félix Cinq-Mars.
+        <div class="logos">
+            <a href="https://www.instagram.com/f5mars/" class="tag"><img src="~/Instagram-Logo.png" alt="Instagram Logo" /></a>
+            <a href="https://www.strava.com/athletes/57449288" class="tag"><img src="~/Strava-Logo.png" alt="Strava Logo" /></a>
+            <a href="https://github.com/FelixCinq-Mars" class="tag"><img src="~/GitHub-Logo.png" alt="GitHub Logo" /></a>
+        </div>
+    </p>
 </div>
+<script>
+    let links = document.querySelectorAll(".tag");
+    links.forEach(function(link) {
+        link.setAttribute("target", "_blank");
+    });
+</script>

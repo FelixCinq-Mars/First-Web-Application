@@ -10,6 +10,7 @@ namespace WebApplicationFelix.Core
 
     public class Shoe
     {
+        public string picture { get; set; }
         public int id { get; set; }
         [Required, StringLength(80)]
         public string name { get; set; }

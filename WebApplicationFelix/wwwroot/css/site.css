@@ -11,26 +11,93 @@ html {
 html {
   position: relative;
   min-height: 100%;
-
 }
 
-body {
-    margin-bottom: 60px;
-    display: flex;
-    float: initial;
-    align-content: flex-start;
+.container {
+    min-height: 100%;
+    padding-bottom: 0px;
 }
-footer {
-    margin-top: auto;
+
+.footer {
+    position: fixed;
 }
+
 .headtable {
     font-weight: bold;
 }
+
 img {
     max-height: 100%;
     max-width: 100%;
 }
+
 .EkoRun {
-    height: 150px;
-    width: 150px;
+    height: 50px;
+    width: 125px;
+    float: left;
+    vertical-align: middle;
+    padding-right: 15px;
+    padding-bottom: 0px;
+    margin-bottom: 0;
+}
+body{
+    background-color: black;
+}
+
+.container {
+    color: azure;
+}
+.table {
+    color: azure;
+}
+header {
+    background: black;
+    color: azure;
+}
+.kipchogeimage {
+    height: 250px;
+}
+.feliximage {
+    height: 250px;
+}
+article {
+    width: 75%;
+}
+.colums {
+    display: flex;
+}
+.athletes {
+    display: flex;
+}
+.athlete {
+    width: 250px;
+    padding: 10px;
+    margin: 10px;
+    background-color: black;
+    border: solid 1px white;
+    padding-bottom: 0;
+}
+.strava {
+    color: orange;
+    padding-bottom: 0;
+    margin-bottom: 5px;
+}
+.desc {
+    margin-bottom: 0;
+}
+.columns .title {
+    font-weight: bold;
+}
+.athlete img {
+    max-width: 100%;
+}
+.logos img {
+    width: 30px;
+    height: 30px;
+}
+.logos {
+    height: 50px;
+}
+.p-athlete {
+    padding-bottom: 0px;
 }

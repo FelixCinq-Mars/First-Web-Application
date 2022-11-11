@@ -12,7 +12,10 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">EkoRun</a>
+                <div class="EkoRun">
+                    <a class="navbar-brand" asp-area="" asp-page="/Index"><img src="/EkoRun.jpg" /></a>
+                </div>
+            
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -47,11 +50,14 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            <vc:shoe-count></vc:shoe-count>
-            &copy; 2022 - EkoRun - <a asp-area="" asp-page="/Privacy">Privacy</a>
-            <div class="EkoRun">
-                <img src="/EkoRun.jpg" />
+            <div class="footer">
+                <div class="footer-text">
+                    <vc:shoe-count></vc:shoe-count>
+                    &copy; 2022 - EkoRun - <a asp-area="" asp-page="/Privacy">Privacy</a>
+                    - Website created by Félix Cinq-Mars
+                </div>               
             </div>
+            
         </div>
     </footer>
 

@@ -3,3 +3,36 @@
 @{
 }
 <h1>Athletes</h1>
+<div class="p-athlete">Here are the athletes that support our cause.</div>
+<article>
+    <section class="athletes">
+        <div class="athlete">
+            <div class="kipchogeimage">
+                <img src="~/Kipchoge.jpg" alt="Eliud Kipchoge" />
+            </div>
+            <div class="columns">
+                <div class="title">Eliud Kipchoge</div>
+                <div class="country">Kenya</div>
+            </div>
+            <p class="desc">Elite runner</p>
+            <p class="strava"><a href="https://www.strava.com/pros/56345305" class="tag">Strava Profile</a></p>
+        </div>
+        <div class="athlete">
+            <div class="feliximage">
+                <img src="~/Felix.jpg" alt="Félix Cinq-Mars" />
+            </div>
+            <div class="columns">
+                <div class="title">Félix Cinq-Mars</div>
+                <div class="country">Canada</div>
+            </div>
+            <p class="desc">Runner for Concordia XC/Track</p>
+            <p class="strava"><a href="https://www.strava.com/athletes/57449288" class="tag">Strava Profile</a></p>
+        </div>
+    </section>
+</article>
+<script>
+    let links = document.querySelectorAll(".tag");
+    links.forEach(function (link) {
+        link.setAttribute("target", "_blank");
+    });
+</script>

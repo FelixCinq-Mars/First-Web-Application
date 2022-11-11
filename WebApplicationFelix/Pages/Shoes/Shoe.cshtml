@@ -10,7 +10,7 @@
 <form method="get">
     <div class="form-group">
         <div class="input-group">
-            <input type="search" class="form-control" asp-for="SearchTerm"/>
+            <input type="search" class="form-control" value="" name="searchTerm"/>
             <div class="input-group-append">
                 <button class="btn btn-secondary">
                     Search
@@ -25,6 +25,7 @@
         <td>Cost ($)</td>
         <td>Color</td>
         <td>Type</td>
+        <td>Actions</td>
     </tr>
    @foreach(var shoe in Model.Shoes) {
        <tr>
